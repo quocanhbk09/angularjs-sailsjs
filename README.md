@@ -6,6 +6,12 @@
 
 ----
 ## usage
-    Clone this repository
+Clone this repository
+
+Install node dependencies
+
     npm install
+
+Run
+
     node app (or sails lift)
