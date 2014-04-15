@@ -1,1 +1,26 @@
-Home controller
+<form class="form-group form-inline" ng-submit="addExam()">
+    <input class="form-control" placeholder="Exam Title" ng-model="var.newExamTitle">
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Created At</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="exam in exams">
+            <td>{{ exam.id }}</td>
+            <td>{{ exam.title }}</td>
+            <td>{{ exam.createdAt }}</td> <!-- You can config here with angular-moment-js -->
+            <td>
+                <button ng-click="deleteExam($index)" type="button" class="btn btn-xs btn-delete-exam" title="delete">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>

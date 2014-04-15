@@ -13,9 +13,6 @@ angular
             },
 
             create: function(title){
-                console.log('title', title);
-                console.log('title', typeof title);
-
                 return $http({method: 'POST', url: '/exam', data: {title: title}}).
                     success(function(response) {
                         console.log(response);
@@ -27,7 +24,6 @@ angular
             },
 
             destroy: function(id){
-                console.log(id);
                 $http({method: 'DELETE', url: '/exam/' + id}).
                     success(function(response) {
                         console.log(response);
